@@ -1,10 +1,10 @@
 'use strict';
 
-var Transaction = require('../../models/transaction');
+var Braintree = require('../../models/braintree');
 
 module.exports = {
   handler: function(request, reply) {
-    Transaction.gateway.clientToken.generate({}, function (err, response) {
+    Braintree.gateway.clientToken.generate({}, function (err, response) {
       if (err) { reply().code(401); }
       reply(response.clientToken);
     });

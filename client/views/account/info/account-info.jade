@@ -1,1 +1,15 @@
-h3 {{title}}
+.row
+  .col-md-12
+    form.form-horizontal(role="form")
+      fieldset
+        .form-group
+          label.col-sm-2.control-label First Name
+          .col-sm-4
+            input.form-control(type="text", placeholder="First Name", value='{{user.firstName}}')
+          label.col-sm-2.control-label Last Name
+          .col-sm-4
+            input.form-control(type="text", placeholder="Last Name", value='{{user.lastName}}')
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            .pull-right
+              button.btn.btn-default Update

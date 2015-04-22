@@ -5,6 +5,6 @@ angular.module('recargas')
   $scope.tabData   = [
     { heading: 'Profile', route:   'account.info' },
     { heading: 'Billing', route:   'account.billing' },
-    { heading: 'Referral', route:   'account.referrals' },
+    // { heading: 'Referral', route:   'account.referrals' },
   ];
 }]);

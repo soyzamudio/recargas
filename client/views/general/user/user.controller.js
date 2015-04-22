@@ -13,7 +13,8 @@ function($rootScope, $scope, $auth, $state, $window) {
   $scope.signup = function() {
     if ($scope.signupForm.pass === $scope.signupForm.veriPass) {
       $auth.signup({
-        name: $scope.signupForm.name,
+        firstName: $scope.signupForm.firstName,
+        lastName: $scope.signupForm.lastName,
         email: $scope.signupForm.email,
         password: $scope.signupForm.pass
       }).then(login);

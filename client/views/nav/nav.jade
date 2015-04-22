@@ -9,7 +9,7 @@ nav.navbar.navbar-default.navbar-static-top(ng-controller='NavCtrl')
       a#logo.navbar-brand(ui-sref='home') Placeholder
     #navbar.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right(ng-if='user')
-        li: a.hvr-underline-reveal(ui-sref='account.info') {{user.name}}
+        li: a.hvr-underline-reveal(ui-sref='account.info') {{user.firstName}} {{user.lastName}}
         li: a.hvr-underline-reveal(href='#', ng-click='logout()' ) Logout
       ul.nav.navbar-nav.navbar-right(ng-if='!user')
         li: a.hvr-underline-reveal(ui-sref='user') User

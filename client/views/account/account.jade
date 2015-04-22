@@ -1,4 +1,14 @@
 section#account
   .container
-    tabs(data='tabData' type='tabs')
-    div(ui-view)
+    .col-md-3
+      .sidebar-nav
+        .well
+          ul.nav.nav-list
+            li.item: a(href="#") Home
+            li.item: a(href="#") Top Ups
+            li.item: a(href="#") How it Works
+            li.item: a(href="#") Support
+    .col-md-8
+      tabs(data='tabData' type='tabs')
+      div(style='margin-top: 5%')
+        div(ui-view)

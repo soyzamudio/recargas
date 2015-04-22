@@ -7,12 +7,13 @@ body { font-family: 'Open Sans', sans-serif; }
 .container-fluid { padding: 0; }
 
 #home, #recharge, #account { padding: 3% 0px; }
+.item { border-bottom: 1px solid #e6e6e6; }
 
 /* Navbar styling */
 
 .navbar-default {
   background-color: @coral;
-  border-color: transparent;
+  border-color: @coral;
 }
 
 .navbar {
@@ -31,26 +32,12 @@ nav {
 
 /* Home styling */
 
-select{
-  -webkit-appearance:caret;
-  -moz-appearance:caret;
-  appearance:caret;
-}
-
 #home {
   background-color: @coral;
   color: @white;
   h1 {
     font-size: 3.2em;
     font-weight: 700;
-  }
-  .input {
-    background-color: transparent;
-    color: white;
-    border: none;
-    box-shadow: none;
-    font-size: 2em;
-    height: auto;
   }
 }
 

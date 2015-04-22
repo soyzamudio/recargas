@@ -11,7 +11,9 @@
     .col-md-4
       .page-header Sign Up
       .form-group
-        input.form-control(type='text', ng-model='signupForm.name', placeholder='Name')
+        input.form-control(type='text', ng-model='signupForm.firstName', placeholder='First Name')
+      .form-group
+        input.form-control(type='text', ng-model='signupForm.lastName', placeholder='Last Name')
       .form-group
         input.form-control(type='email', ng-model='signupForm.email', placeholder='Email')
       .form-group

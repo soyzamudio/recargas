@@ -1,1 +1,38 @@
-h3 Billing
+.row
+  .col-md-12
+    form.form-horizontal(role="form")
+      fieldset
+        .form-group
+          label.col-sm-2.control-label(for="textinput") First Name
+          .col-sm-4
+            input.form-control(type="text", placeholder="First Name", value='{{user.firstName}}')
+          label.col-sm-2.control-label(for="textinput") Last Name
+          .col-sm-4
+            input.form-control(type="text", placeholder="Last Name", value='{{user.lastName}}')
+        .form-group
+          label.col-sm-2.control-label(for="textinput") Line 1
+          .col-sm-10
+            input.form-control(type="text", placeholder="Address Line 1")
+        .form-group
+          label.col-sm-2.control-label(for="textinput") Line 2
+          .col-sm-10
+            input.form-control(type="text", placeholder="Address Line 2")
+        .form-group
+          label.col-sm-2.control-label(for="textinput") City
+          .col-sm-10
+            input.form-control(type="text", placeholder="City")
+        .form-group
+          label.col-sm-2.control-label(for="textinput") State
+          .col-sm-4
+            input.form-control(type="text", placeholder="State")
+          label.col-sm-2.control-label(for="textinput") Postcode
+          .col-sm-4
+            input.form-control(type="text", placeholder="Post Code")
+        .form-group
+          label.col-sm-2.control-label(for="textinput") Country
+          .col-sm-10
+            input.form-control(type="text", placeholder="Country")
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            .pull-right
+              button.btn.btn-default Update

@@ -1,12 +1,12 @@
 'use strict';
 
-var Transaction = require('../../models/transaction');
+var Braintree = require('../../models/braintree');
 var TopUp = require('../../models/topups');
 
 module.exports = {
   handler: function(request, reply) {
     var nonce = request.payload.nonce;
-    Transaction.gateway.transaction.sale({ amount: "10.00", paymentMethodNonce: nonce }, function (err, result) {
+    Braintree.gateway.transaction.sale({ amount: "10.00", paymentMethodNonce: nonce }, function (err, result) {
       if (err) { res.send('error:', err); }
       var transaction = new TopUp({
         topupId: result.transaction.id,

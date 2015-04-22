@@ -6,5 +6,7 @@ module.exports = [
   {method: 'post', path: '/auth/login', config: require('../routes/users/login')},
 
   {method: 'get', path: '/client_token', config: require('../routes/recharge/tokens')},
-  {method: 'post', path: '/recharge/checkout', config: require('../routes/recharge/checkout')}
+  {method: 'post', path: '/recharge/checkout', config: require('../routes/recharge/checkout')},
+
+  {method: 'get', path: '/account/billing', config: require('../routes/users/billing')}
 ];
