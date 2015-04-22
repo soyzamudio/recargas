@@ -1,0 +1,67 @@
+@coral: #FF5757;
+@white: #FFFFFF;
+
+body { font-family: 'Open Sans', sans-serif; }
+
+.hvr-underline-reveal:before { background: @white; height: 2px; }
+.container-fluid { padding: 0; }
+
+#home, #recharge, #account { padding: 3% 0px; }
+
+/* Navbar styling */
+
+.navbar-default {
+  background-color: @coral;
+  border-color: transparent;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+nav {
+  #logo {
+    font-family: 'Lily Script One', cursive;
+    color: @white;
+  }
+  #navbar a {
+    color: @white;
+  }
+}
+
+/* Home styling */
+
+select{
+  -webkit-appearance:caret;
+  -moz-appearance:caret;
+  appearance:caret;
+}
+
+#home {
+  background-color: @coral;
+  color: @white;
+  h1 {
+    font-size: 3.2em;
+    font-weight: 700;
+  }
+  .input {
+    background-color: transparent;
+    color: white;
+    border: none;
+    box-shadow: none;
+    font-size: 2em;
+    height: auto;
+  }
+}
+
+.btn-user {
+  border: 2px solid @white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  color: @white;
+  &:hover {
+    background: @white;
+    color: @coral;
+  }
+}

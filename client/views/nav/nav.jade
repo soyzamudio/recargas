@@ -1,0 +1,18 @@
+nav.navbar.navbar-default.navbar-static-top(ng-controller='NavCtrl')
+  .container
+    .navbar-header
+      button.navbar-toggle.collapsed(data-toggle="collapse", data-target="#navbar")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a#logo.navbar-brand(ui-sref='home') Placeholder
+    #navbar.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right(ng-if='user')
+        li: a.hvr-underline-reveal(ui-sref='account.info') {{user.name}}
+        li: a.hvr-underline-reveal(href='#', ng-click='logout()' ) Logout
+      ul.nav.navbar-nav.navbar-right(ng-if='!user')
+        li: a.hvr-underline-reveal(ui-sref='user') User
+      ul.nav.navbar-nav.navbar-right
+        li: a.hvr-underline-reveal(ui-sref='home') Home
+        li: a.hvr-underline-reveal(ui-sref='recharge.selection') Top Up
