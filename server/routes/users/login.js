@@ -9,6 +9,7 @@ module.exports = {
       if(err){ reply().code(401); }
       let token = user.token();
       user.password = null;
+      user.braintreeId = null;
       reply({token:token, user:user});
     });
   }

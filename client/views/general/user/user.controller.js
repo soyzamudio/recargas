@@ -16,6 +16,7 @@ function($rootScope, $scope, $auth, $state, $window) {
         firstName: $scope.signupForm.firstName,
         lastName: $scope.signupForm.lastName,
         email: $scope.signupForm.email,
+        phone: $scope.signupForm.phone,
         password: $scope.signupForm.pass
       }).then(login);
     }

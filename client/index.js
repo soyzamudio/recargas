@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('recargas', ['ui.router', 'ngMessages', 'ui.bootstrap', 'ui.router.tabs', 'satellizer', 'braintree-angular'])
+angular.module('recargas',
+['ui.router', 'ngMessages', 'ui.bootstrap', 'ui.router.tabs', 'satellizer', 'braintree-angular', 'mcwebb.countrycodes', 'ui.select', 'ngSanitize'])
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
 
@@ -21,9 +22,13 @@ angular.module('recargas', ['ui.router', 'ngMessages', 'ui.bootstrap', 'ui.route
     .state('account.billing', {url: '/billing', templateUrl: '/views/account/billing/account-billing.html', controller: 'AccountBillingController'})
     .state('account.referrals', {url: '/referrals', templateUrl: '/views/account/referrals/account-referrals.html', controller: 'AccountReferralsController'});
 }])
-.run(['$rootScope', '$window', '$auth', function($rootScope, $window, $auth) {
+.run(['$rootScope', '$window', '$auth', 'User', 'CountryCodes', function($rootScope, $window, $auth, User, CountryCodes) {
+  $rootScope.countries = CountryCodes.getList();
   console.log($auth.isAuthenticated());
   if ($auth.isAuthenticated()) {
     $rootScope.user = JSON.parse($window.localStorage.user);
+    User.getBilling().then(function(response) {
+      $rootScope.billing = response.data.customer;
+    });
   }
 }]);

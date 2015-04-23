@@ -10,6 +10,13 @@
           .col-sm-4
             input.form-control(type="text", placeholder="Last Name", value='{{user.lastName}}')
         .form-group
+          label.col-sm-2.control-label(for="textinput") Email
+          .col-sm-4
+            input.form-control(type="text", placeholder="Email", value='{{user.email}}')
+          label.col-sm-2.control-label(for="textinput") Cell Phone
+          .col-sm-4
+            input.form-control(type="tel", placeholder="Cell Phone", value='{{user.phone}}')
+        .form-group
           .col-sm-offset-2.col-sm-10
             .pull-right
               button.btn.btn-default Update

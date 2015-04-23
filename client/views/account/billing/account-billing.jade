@@ -1,22 +1,26 @@
 .row
   .col-md-12
+    .page-header.billing-header: h6 Personal Information
     form.form-horizontal(role="form")
       fieldset
         .form-group
           label.col-sm-2.control-label(for="textinput") First Name
           .col-sm-4
-            input.form-control(type="text", placeholder="First Name", value='{{user.firstName}}')
+            input.form-control(type="text", placeholder="First Name", value='{{billing.firstName}}')
           label.col-sm-2.control-label(for="textinput") Last Name
           .col-sm-4
-            input.form-control(type="text", placeholder="Last Name", value='{{user.lastName}}')
+            input.form-control(type="text", placeholder="Last Name", value='{{billing.lastName}}')
+        .form-group
+          label.col-sm-2.control-label(for="textinput") Email
+          .col-sm-4
+            input.form-control(type="text", placeholder="Email", value='{{billing.email}}')
+          label.col-sm-2.control-label(for="textinput") Cell Phone
+          .col-sm-4
+            input.form-control(type="tel", placeholder="Cell Phone", value='{{billing.phone}}')
         .form-group
           label.col-sm-2.control-label(for="textinput") Line 1
           .col-sm-10
             input.form-control(type="text", placeholder="Address Line 1")
-        .form-group
-          label.col-sm-2.control-label(for="textinput") Line 2
-          .col-sm-10
-            input.form-control(type="text", placeholder="Address Line 2")
         .form-group
           label.col-sm-2.control-label(for="textinput") City
           .col-sm-10
@@ -32,6 +36,14 @@
           label.col-sm-2.control-label(for="textinput") Country
           .col-sm-10
             input.form-control(type="text", placeholder="Country")
+        .form-group
+          .col-sm-offset-2.col-sm-10
+            .pull-right
+.row
+  .col-md-12
+    .page-header.billing-header2: h6 Credit Card Information
+    form.form-horizontal(role="form")
+      fieldset
         .form-group
           .col-sm-offset-2.col-sm-10
             .pull-right

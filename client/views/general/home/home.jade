@@ -4,3 +4,25 @@ section#home
       .col-md-12.text-center
         h1 International Mobile Top Ups
         h3 Send top ups to over 100 countries and 150 carriers worldwide.
+      .col-md-12
+        .col-md-offset-2.col-md-8
+          .input-group
+            span.input-group-addon Step One
+            ui-select.country(ng-model='country.selected', theme='selectize')
+              ui-select-match(placeholder='Select or search a country...')
+                span.flag(class='flag-{{$select.selected.iso2}}')
+                span &nbsp; {{$select.selected.name}}
+                small 
+                  strong &nbsp; +{{$select.selected.dialCode}}
+              ui-select-choices(repeat='country in countries | filter: $select.search') 
+                span.flag(class='flag-{{country.iso2}}')
+                span &nbsp; {{country.name}} 
+                small
+                  strong &nbsp; +{{country.dialCode}}
+                  
+section#info(ng-if='country.selected')
+  .container
+    .row.text-center
+      .col-md-3(ng-repeat='provider in providers')
+        p {{provider.name}}
+        p {{provider.range}}
