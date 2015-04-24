@@ -7,5 +7,9 @@ angular.module('recargas')
       return $http.get('/account/billing', {braintreeId: $rootScope.user.braintreeId});
     }
 
-    return { getBilling:getBilling };
+    function getHistory() {
+      return $http.get('/account/history');
+    }
+
+    return { getBilling:getBilling, getHistory:getHistory };
   }]);

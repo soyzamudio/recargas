@@ -8,8 +8,12 @@ var topupSchema = mongoose.Schema({
   status: String,
   type: String,
   amount: String,
-  createdAt: Date,
-  success: Boolean
+  success: Boolean,
+  sender: {type: mongoose.Schema.ObjectId, ref: 'User'},
+  receiver: String,
+  country: String,
+  provider: String,
+  createdAt: Date
 });
 
 TopUp = mongoose.model('TopUp', topupSchema);

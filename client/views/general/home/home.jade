@@ -20,9 +20,46 @@ section#home
                 small
                   strong &nbsp; +{{country.dialCode}}
                   
-section#info(ng-if='country.selected')
+section#info(ng-if='country.selected', style='overflow:hidden')
+  .container(ng-class='{"animated fadeInDown" : country.selected}')
+    .row
+      .col-md-3(ng-repeat='provider in providers')
+        .col-md-12.post
+          .container-fluid
+            .col-md-12.info
+              .col-md-6
+                img.img-circle(src='{{provider.img}}', width='30', height='30')
+                strong &nbsp; {{provider.name}}
+              .col-md-6(style='text-align:right') {{provider.range}}
+            .col-md-6.button.button-left Deals
+            .col-md-6.button.button-right 
+              | Select &nbsp;
+              span.fa.fa-angle-right
+              span.fa.fa-angle-right
+              span.fa.fa-angle-right
+              
+section#loyalty
+  .container
+    h3 We Reward Your 
+      span.loyal: strong Loyalty
   .container
     .row.text-center
-      .col-md-3(ng-repeat='provider in providers')
-        p {{provider.name}}
-        p {{provider.range}}
+      .col-md-4
+        span.fa.fa-user-plus
+        h3 Sign Up
+        p Create an account with us so we can keep track of your information and faster check out.
+      .col-md-4
+        span.fa.fa-paper-plane-o
+        h3 Send Top Ups
+        p Send top ups to family and friends around the world and we will keep track of every transaction for you.
+      .col-md-4
+        span.fa.fa-gift
+        h3 Get Rewarded
+        p Every transaction gives you points (reach goals and get more points!) and you can exchange them for prizes!
+            
+section#count
+  .container
+    .row
+      .col-md-12.text-center
+        h3 Top Ups Sent Around The World
+        h1 {{count | number}}

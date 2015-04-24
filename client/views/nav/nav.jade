@@ -6,8 +6,19 @@ nav.navbar.navbar-default.navbar-static-top(ng-controller='NavCtrl')
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a#logo.navbar-brand(ui-sref='home') Xoom
+      a#logo.navbar-brand(ui-sref='home')
+        img(src='/assets/logo-white.png', height='27', width='auto')
+      
     #navbar.collapse.navbar-collapse
+      //- ul.nav.navbar-nav
+      //-   li.dropdown
+      //-     a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-expanded="false")
+      //-       span.flag.flag-us
+      //-       span.caret
+      //-     ul.dropdown-menu(role="menu")
+      //-       li: a(href="#"): span.flag.flag-us
+      //-       li: a(href="#"): span.flag.flag-mx
+
       ul.nav.navbar-nav.navbar-right(ng-if='user')
         li: a.hvr-underline-reveal(ui-sref='account.info') {{user.firstName}} {{user.lastName}}
         li: a.hvr-underline-reveal(href='#', ng-click='logout()') Logout

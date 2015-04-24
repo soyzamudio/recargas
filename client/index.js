@@ -15,12 +15,13 @@ angular.module('recargas',
 
     .state('recharge', {url: '/recharge', templateUrl: '/views/recharge/recharge.html', controller: 'RechargeController', abstract: true})
     .state('recharge.selection', {url: '', templateUrl: '/views/recharge/selection/recharge-selection.html', controller: 'RechargeSelectionController'})
-    .state('recharge.checkout', {url: '/checkout', templateUrl: '/views/recharge/checkout/recharge-checkout.html', controller: 'RechargeCheckoutController'})
+    .state('recharge.receipt', {url: '/receipt', templateUrl: '/views/recharge/receipt/recharge-receipt.html', controller: 'RechargeReceiptController'})
 
     .state('account', {url: '/account', templateUrl: '/views/account/account.html', controller: 'AccountController', abstract: true})
     .state('account.info', {url: '', templateUrl: '/views/account/info/account-info.html', controller: 'AccountInfoController'})
     .state('account.billing', {url: '/billing', templateUrl: '/views/account/billing/account-billing.html', controller: 'AccountBillingController'})
-    .state('account.referrals', {url: '/referrals', templateUrl: '/views/account/referrals/account-referrals.html', controller: 'AccountReferralsController'});
+    .state('account.referrals', {url: '/referrals', templateUrl: '/views/account/referrals/account-referrals.html', controller: 'AccountReferralsController'})
+    .state('account.history', {url: '/history', templateUrl: '/views/account/history/account-history.html', controller: 'AccountHistoryController'});
 }])
 .run(['$rootScope', '$window', '$auth', 'User', 'CountryCodes', function($rootScope, $window, $auth, User, CountryCodes) {
   $rootScope.countries = CountryCodes.getList();

@@ -4,15 +4,17 @@ html(lang='en', ng-app='recargas')
     meta(charset='utf-8')      
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title Pied Piper
+    title AirTym. International Mobile Top Ups.
     link(rel='stylesheet', href='/vendor/Hover/css/hover-min.css', media='all')
     link(href='/vendor/flag-css/dist/flag-css.css', rel='stylesheet')
+    link(rel="stylesheet", href="/vendor/animate.css/animate.min.css")
     link(rel="stylesheet", href="/vendor/angular-ui-select/dist/select.css")
     link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href='/vendor/selectize/dist/css/selectize.default.css')
     link(href='http://fonts.googleapis.com/css?family=Lily+Script+One', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Inconsolata:400,700', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='/index.css')
     link(rel='shortcut icon', href='/favicon.ico')
     script(src='/vendor/angular/angular.js')
@@ -26,6 +28,9 @@ html(lang='en', ng-app='recargas')
     
     .container-fluid
       div(ui-view)
+      
+    include ./views/footer/footer
+
 
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/vendor/angular-messages/angular-messages.js')
@@ -38,5 +43,6 @@ html(lang='en', ng-app='recargas')
     script(src='/vendor/braintree-angular/dist/braintree-angular.js')
     script(src='/vendor/bootstrap/dist/js/bootstrap.min.js')
     script(src='/vendor/angular-countrycodes/angular-countrycodes.js')
-    script(src='vendor/angular-ui-select/dist/select.js')
+    script(src='/vendor/angular-ui-select/dist/select.js')
+    script(src='/vendor/phoneformat.js/dist/phone-format.js')
     script(src='/index.js')

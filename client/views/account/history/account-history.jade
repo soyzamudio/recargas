@@ -1,0 +1,17 @@
+table.table
+  thead
+    tr
+      th Date
+      th Order # 
+      th Sender
+      th Receiver
+      th Amount
+      th Status
+  tbody
+    tr(ng-repeat='topup in history')
+      td {{topup.createdAt | date : format : 'MMM d, y h:mm:ss a'}}
+      td {{topup.topupId}}
+      td {{user.phone | tel}}
+      td {{topup.receiver | int}}
+      td {{topup.amount | currency }}
+      td {{topup.status}}

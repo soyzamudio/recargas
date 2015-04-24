@@ -32,6 +32,10 @@ nav {
 
 /* Home styling */
 
+#info, #footer, #loyalty {
+  border-top: 1px solid #f2f2f2;
+}
+
 #home {
   background-color: @coral;
   color: @white;
@@ -69,6 +73,75 @@ nav {
   }
 }
 
+#info {
+  background: #fdfdfd;
+  padding: 2% 0;
+  overflow: hidden;
+  .post {
+    background: @white;
+    padding: 0;
+    margin: 10px;
+    border-radius: 2px;
+    border: 1px solid #D4D4D9;
+    .info {
+      padding: 15px 0;
+    }
+    .button {
+      padding: 10px;
+      text-align: center;
+    }
+    .button-left {
+      border-top: 1px solid #D4D4D9;
+      border-right: 1px solid #D4D4D9;
+      &:hover {
+        background: #f9f9f9;
+        cursor: pointer;
+      }
+    }
+    .button-right {
+      border-top: 1px solid #D4D4D9;
+      &:hover {
+        background: #f9f9f9;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+#loyalty {
+  padding: 4% 0;
+  h3 {
+    margin-top: 0;
+  }
+  .loyal {
+    color: @coral;
+  }
+  .fa {
+    margin: 5% 0 10%;
+    font-size: 4.5em;
+  }
+}
+
+#count {
+  background: url(/assets/count-bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: @white;
+  padding: 3%;
+  h1, h3 {
+    font-family: 'Inconsolata';
+    margin: 0;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 3.7em;
+  }
+  h3 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 2em;
+  }
+}
+
 /* Billing Styling */
 
 .billing-header {
@@ -81,5 +154,27 @@ nav {
   margin: 10px 0 40px;
   h6 {
     font-weight: 600;
+  }
+}
+
+/* Footer Styling */
+
+#footer {
+  padding: 2%;
+  .title {
+    font-weight: 600;
+  }
+  .bottom-menu-brand {
+    margin: 0;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+    li a {
+      color: #666;
+      &:hover {
+        text-transform: none;
+      }
+    }
   }
 }
