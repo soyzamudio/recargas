@@ -1,5 +1,27 @@
-h3 Selection
-
+.page-header
+  h6 Provider Information
+form.form-horizontal(role="form")
+  fieldset
+    .form-group
+      label.col-sm-1.control-label Country
+      .col-sm-4
+        input.form-control(type="text", ng-model='transaction.country', placeholder="Country", value='{{topup.country}}')
+      label.col-sm-2.control-label Provider
+      .col-sm-4
+        input.form-control(type="text", ng-model='transaction.provider', placeholder="Provider", value='{{topup.provider}}')
+    .form-group
+      label.col-sm-1.control-label(for="textinput") Amount
+      .col-sm-4
+        input.form-control(type="text", ng-model='transaction.amount', placeholder="Amount", value='')
+      label.col-sm-2.control-label(for="textinput") Cell Phone
+      .col-sm-4
+        input.form-control(type="tel", ng-model='transaction.phone', placeholder="International Number", value='')
+          
+.page-header
+  h6 Billing Information
 form(action='/recharge/checkout', method='post')
   braintree-dropin(options='dropinOptions') Loading payment form...
-  input.btn.btn-default(type='submit', value='Buy for $14')
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      .pull-right
+        button.btn.btn-default(type='submit') Top Up {{transaction.amount | currency}}

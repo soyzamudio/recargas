@@ -2,7 +2,11 @@
 
 angular.module('recargas')
 .constant('clientTokenPath', '/client_token')
-.controller('RechargeSelectionController', ['$scope', '$braintree', '$http', function($scope, $braintree, $http) {
+.controller('RechargeSelectionController', ['$rootScope', '$scope', '$braintree', '$http', function($rootScope, $scope, $braintree, $http) {
+  $scope.topup = $rootScope.topup;
+  console.log($scope.topup);
+  $rootScope.data = null;
+
   var client;
   $braintree.getClientToken().success(function(token) {
     client = new $braintree.api.Client({
